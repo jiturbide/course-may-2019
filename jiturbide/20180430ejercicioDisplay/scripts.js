@@ -1,3 +1,4 @@
+/*
 (function(){
   'use strict';
 
@@ -33,6 +34,7 @@
   }
 
   function showModal() {
-    modal.classList.remove('modal--hidden)';    
+    modal.classList.remove('modal--hidden)';
   }
 })();
+*/
