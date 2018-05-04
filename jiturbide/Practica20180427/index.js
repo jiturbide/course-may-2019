@@ -36,9 +36,9 @@ http.createServer(function (request, response) {
 
         //3. Replace placeholders
         let outputData = dataTemplate;
-        outputData = outputData.replace("<<environment>>", jsonData.environment);
-        outputData = outputData.replace("<<server>>", jsonData.server);
-        outputData = outputData.replace("<<port>>", jsonData.port);
+        outputData = outputData.replace('<<environment>>', jsonData.environment);
+        outputData = outputData.replace('<<server>>', jsonData.server);
+        outputData = outputData.replace('<<port>>', jsonData.port);
 
         //4. Write file
         const outputFilename = `output.${environment}.txt`;
@@ -52,7 +52,7 @@ http.createServer(function (request, response) {
 
     });
 
-    // Send the response body as "Hello World"
+    // Send the response body as 'Hello World'
     response.write('<h2>Respuesta desde el server Hello World </h2><br/>');
     response.write('<br/>');
     response.end();
