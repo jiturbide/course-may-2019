@@ -38,8 +38,10 @@ body {
   max-width: 800px;
 }
 
-.cnavbar__item{
+.cnavbar__item--link{
   height: 100%;
+  text-decoration: none;
+  transform: uppercase;
 }
 
 
