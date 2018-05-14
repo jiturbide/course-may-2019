@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:" content="">
+  <link rel="stylesheet" href="styles.css">
+  <title>Web component</title>
+</head>
+  <body>
+
+    <h2>Mi barra de Progreso</h2>
+
+    <my-progress-bar color-bar="green" speed-update="high"></my-progress-bar>
+
+    <button id="boton" class="boton">Iniciar proceso</button>
+
+  <script>
+    ( function(customElements) {
+        'use strict';
+
+        class MyProgressBar extends HTMLElement {
+          constructor() {
+            super();
+            this.colorBar;
+            this.speedUpdate;
+
+            const shadowRoot = this.attachShadow({mode: 'open'});
+            shadowRoot.innerHTML = `
+              <style>
+                p {
+                  font-size: 20pt;
+                  color: blue;
+                }
+              </style>
+              <p>Hola ${this.myName}</p>
+            `;
+          } //fin constructor
+          get colorBar() {
+            const value = this.getAttribute('color-bar');
+            console.log("colorBar: " + value);
+            return value;
+          }
+          get speedUpdate() {
+            const value = this.getAttribute('color-bar');
+            console.log("speedUpdate: " + value);
+            return value;
+          }
+
+        } //fin clase
+        //Asociacion de Custom element con la Clase
+        customElements.define('my-progress-bar', MyProgressBar);
+    })(window.customElements);
+  </script>
+
+  <script type="text/javascript">
+    const inputName = document.getElementById('inputName');
+    const button = document.getElementById('button');
+    const myProgressBarElement = document.querySelector('my-progress-bar');
+
+    button.addEventListener('click', () => {
+      myProgressBarElement. =inputName;
+      console.log('click event');
+    })
+
+  </script>
+
+  </body>
+</html>

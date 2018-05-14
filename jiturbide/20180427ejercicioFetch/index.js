@@ -11,7 +11,7 @@
      .then(jsondata => printResponse(jsondata))
      .catch(err => console.log('Fallo la peticion ' + err));
 
-	function printResponse(jsondata) {
+	const printResponse = (jsondata) => {
 		 	let theHtml = '';
 		 	let theRow = '';
 
